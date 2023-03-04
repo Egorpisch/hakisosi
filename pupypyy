@@ -1,0 +1,651 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+
+local Window = Library.CreateLib("Ant Simulator", "RJTheme3")
+
+local Tab = Window:NewTab("Teleports")
+
+local Section = Tab:NewSection("Secret Tokens")
+
+Section:NewButton("5x tickets (0)", "microphone top", function()
+    game:GetService("Workspace").TokensRewards["013kALflsdg"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+Section:NewButton("x5 tickets (1st)", "microphone top", function()
+    game:GetService("Workspace").TokensRewards["8194kKAs"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+Section:NewButton("x5 tickets (2nd)", "microphone top", function()
+    game:GetService("Workspace").TokensRewards["A183ksld"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+Section:NewButton("x5 tickets (3rd)", "microphone top", function()
+    game:GetService("Workspace").TokensRewards["Afgdjisg1"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+Section:NewButton("x5 tickets (4th)", "fff", function()
+    game:GetService("Workspace").TokensRewards["ERjgw14A"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+Section:NewButton("x5 tickets (5th)", "fff", function()
+    game:GetService("Workspace").TokensRewards["KDKAls314"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+Section:NewButton("x5 tickets (6th)", "xff", function()
+    game:GetService("Workspace").TokensRewards["PEkasfxld"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+Section:NewButton("5x tickets (7th)", "xray", function()
+    game:GetService("Workspace").TokensRewards["XMCVbn2"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+Section:NewButton("5x tickets (8th)", "xray", function()
+    game:GetService("Workspace").TokensRewards["DK3r819"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+Section:NewButton("Capacity Boost (7d)", "x7 capactiy, x2.5 pollen, x1.75 convert rate", function()
+    game:GetService("Workspace").TokensRewards["CapacityBuff"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+Section:NewButton("o'Clock (12h in game)", "x1.05 pollen, x1.05 convert rate", function()
+    game:GetService("Workspace").TokensRewards["Chocolate2023"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+local Section = Tab:NewSection("Bosses")
+
+Section:NewButton("Yeti", "finnese", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").YetiZone.SlipperyFloor.CFrame
+end)
+
+local Section = Tab:NewSection("Shops")
+
+Section:NewDropdown("Select Shop", "drapdawn infinity faaa", {"CaveShop", "CookieShop", "EggShop", "BlueShop", "RedShop", "FirstShop", "SecondShop", "ThirdShop", "SoulJarShop", "SproutShop", "TicketShop", "WeaponShop", "WinterShop", "ShamanShop"}, function(cursedina)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Shops[cursedina].RegionPart.CFrame
+end)
+
+local Section = Tab:NewSection("NPCs")
+
+Section:NewDropdown("Select NPC", "drapdawn infinity faaa", {"Bear", "Beaver Builder", "Blue Parrot", "Donkey", "Fox", "Little Ginger", "Model", "Mole", "Mouse", "Raccoon", "Ram", "Red Parrot", "Santa", "Shaman", "Woodpecker"}, function(cursedd)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPC[cursedd].HumanoidRootPart.CFrame
+end)
+
+local Section = Tab:NewSection("Fields")
+
+Section:NewDropdown("Select Fields", "drapdawn infinity faaa", {"Bamboo", "Beetroot", "Bell-Flower", "Blue-Flowers", "Cattail", "Cedar", "Clover", "Corn", "Daisy", "Dandelion", "Mushroom", "Pear", "Poppy", "Pumpkin", "Rosehip", "Strawberry", "Sunflower", "Toadstool", "Walnut", "Watermelon"}, function(curseddd)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Fields[curseddd].Flower.CFrame
+end)
+
+local Tab = Window:NewTab("Farms")
+
+local Section = Tab:NewSection("Server Tokens")
+
+Section:NewToggle("AutoCollect ServerTokens", "w/Dox", function(state)
+    if state then
+        aut = 1
+        while wait() do
+        if aut == 1 then
+            for i,v in pairs(game:GetService("Workspace").ServerTokens:GetDescendants()) do
+                if v.Name == 'Token' then
+                    v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                end
+            end
+        end
+        end
+    else
+        aut = 0
+    end
+end)
+
+local Section = Tab:NewSection("Client Tokens")
+
+Section:NewToggle("AutoCollect ClientTokens", "w/Dox", function(state)
+    if state then
+        tt = 1
+        while wait() do
+        if tt == 1 then
+            for i,v in pairs(game:GetService("Workspace").ClientTokens:GetDescendants()) do
+                if v.Name == 'Token' then
+                    v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                end
+            end
+        end
+        end
+    else
+        tt = 0
+    end
+end)
+
+local Section = Tab:NewSection("AutoFarm")
+
+Section:NewToggle("AutoFarm", "w/Dox", function(state)
+    if state then
+        autff = 1
+        while wait() do
+        if autff == 1 then
+            kkk = 1
+            local namir = tostring(game.Players.LocalPlayer.Character)
+            local textinfo = game:GetService("Workspace")[namir].Backpacks.Display.Gui.ProgressLabel.Text
+            local indend = string.find(textinfo, "/")
+            local capacitymax1 = string.sub(textinfo, indend + 1)
+            local capacitymax2 = string.gsub(capacitymax1, ",", "")
+            local capacitymax3 = tonumber(capacitymax2)
+            local capacityempty = tonumber(game:GetService("Players")[namir].Leaderstats.Pollen.Value)
+            if (capacityempty >= capacitymax3) then
+                game:GetService("Workspace")[namir].Backpacks.Display.Gui.ProgressLabel.Text = "1"
+                place1 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                if game:GetService("Workspace").AmbarPlatfroms["3"].Player.Value == namir then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["3"]["3"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["3"]["3"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["3"]["3"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["3"]["3"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["3"]["3"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["3"]["3"]:GetChildren()[9].CFrame
+                    wait(0.5)
+                elseif game:GetService("Workspace").AmbarPlatfroms["1"].Player.Value == namir then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["1"]["1"]:GetChildren()[8].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["1"]["1"]:GetChildren()[8].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["1"]["1"]:GetChildren()[8].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["1"]["1"]:GetChildren()[8].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["1"]["1"]:GetChildren()[8].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["1"]["1"]:GetChildren()[8].CFrame
+                    wait(0.5)
+                elseif game:GetService("Workspace").AmbarPlatfroms["2"].Player.Value == namir then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["2"]["2"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["2"]["2"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["2"]["2"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["2"]["2"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["2"]["2"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["2"]["2"]:GetChildren()[9].CFrame
+                    wait(0.5)
+                elseif game:GetService("Workspace").AmbarPlatfroms["4"].Player.Value == namir then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["4"]["4"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["4"]["4"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["4"]["4"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["4"]["4"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["4"]["4"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["4"]["4"]:GetChildren()[9].CFrame
+                    wait(0.5)
+                elseif game:GetService("Workspace").AmbarPlatfroms["5"].Player.Value == namir then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["5"]["5"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["5"]["5"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["5"]["5"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["5"]["5"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["5"]["5"]:GetChildren()[9].CFrame
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").AmbarPlatfroms["5"]["5"]:GetChildren()[9].CFrame
+                    wait(0.5)
+                end
+                game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.E,false,game)
+                doxxx = 1
+                while wait() do
+                if doxxx == 1 then
+                    if tonumber(game:GetService("Players")[namir].Leaderstats.Pollen.Value) == 0 then
+                        wait(tictac * 1.00001)
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = place1
+                        doxxx = 0
+                        break
+                    end
+                end
+                end
+            end
+        end
+        end
+    else
+        autff = 0
+    end
+end)
+
+Section:NewToggle("AutoFarm with CM", "Convert Marks nice farm", function(state)
+    if state then
+        potrogayte = 1
+        local namir34 = tostring(game.Players.LocalPlayer.Character)
+        while wait() do
+        if potrogayte == 1 then
+            while wait(0.3) do
+            if potrogayte == 1 then
+                for i,v in pairs(game:GetService("Workspace").Effects:GetDescendants()) do
+                    if potrogayte == 1 then
+                    if v.Name == "ConvertMark" then
+                        game:GetService("Workspace")[namir34].Humanoid:MoveTo(v.Primary.CFrame.Position, v.Primary)
+                    end
+                    end
+                end
+            end
+            end
+        end
+        end
+    else
+        potrogayte = 0
+    end
+end)
+
+Section:NewToggle("AutoFarm ICEYeti", "Yeti farm, stay near ice yeti", function(state)
+    if state then
+        potrogayteee = 1
+        while wait() do
+        if potrogayteee == 1 then
+            local args = {
+            [1] = workspace:WaitForChild("Ores"):WaitForChild("YetiICE")
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Tools"):WaitForChild("PickaxeCollect"):FireServer(unpack(args))
+        end
+        end
+    else
+        potrogayteee = 0
+    end
+end)
+
+Section:NewToggle("AutoDig", "w/Dox", function(state)
+    if state then
+        tt = 1
+        while game:GetService("RunService").RenderStepped:wait() do
+        if tt == 1 then
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Tools"):WaitForChild("ToolCollect"):FireServer()
+        end
+        end
+    else
+        tt = 0
+    end
+end)
+
+Section:NewTextBox("Enter sec. back", "...", function(timeback)
+    tictac = tonumber(timeback)
+end)
+
+local Tab = Window:NewTab("Hack Buy")
+
+local Section = Tab:NewSection("BUY ITEMS ONLY MONEY")
+
+Section:NewLabel("IT'S WORK WITHOUT RECOURCES")
+
+Section:NewLabel("BUT WITH ONLY MONEY")
+
+Section:NewDropdown("Select Item (BlueShop)", "...", {"Net", "Blue Shoulder", "Blue Guard Shoulder", "Blue Blucko-Guard Shoulder", "Mittens", "Pom-Pon Hat", "Felt Boots", "Blue Santa Bag", "Watering Can", "Bubble Gun"}, function(it)
+    shopping = "BlueShop"
+    if it == 'Pom-Pon Hat' then
+    itemming = "Hat"
+    itemming2 = ""
+    elseif it == 'Felt Boots' then
+    itemming = "Boots"
+    itemming2 = ""
+    elseif it == 'Blue Santa Bag' then
+    itemming = "Bag"
+    itemming2 = ""
+    else
+    itemming = tostring(it)
+    itemming2 = ""
+    end
+end)
+
+Section:NewDropdown("Select Item (CaveShop)", "...", {"Wooden Pickaxe", "Miner's Helmet", "Iron Pickaxe", "Golden Pickaxe", "Diamond Pickaxe"}, function(it)
+    shopping = "CaveShop"
+    if it == 'Wooden Pickaxe' then
+    itemming2 = game:GetService("Workspace").Shops.CaveShop.Items:GetChildren()[2]
+    itemming = ""
+    elseif it == "Miner's Helmet" then
+    itemming = "Hat"
+    itemming2 = ""
+    elseif it == "Iron Pickaxe" then
+    itemming2 = game:GetService("Workspace").Shops.CaveShop.Items:GetChildren()[3]
+    itemming = ""
+    elseif it == "Golden Pickaxe" then
+    itemming2 = game:GetService("Workspace").Shops.CaveShop.Items:GetChildren()[4]
+    itemming = ""
+    elseif it == "Diamond Pickaxe" then
+    itemming2 = game:GetService("Workspace").Shops.CaveShop.Items:GetChildren()[5]
+    itemming = ""
+    end
+end)
+
+Section:NewDropdown("Select Item (CookieShop)", "...", {"Cookie x1", "Cookie x10", "Cookie x100", "Cookie x1000", "Cookie x10,000", "Cookie x100,000", "Cookie x1,000,000"}, function(it)
+    shopping = "CookieShop"
+    itemming = tostring(it)
+    itemming2 = ""
+end)
+
+Section:NewDropdown("Select Item (EggShop)", "...", {"Classic Egg"}, function(it)
+    shopping = "EggShop"
+    itemming = tostring(it)
+    itemming2 = ""
+end)
+
+Section:NewDropdown("Select Item (FirstShop)", "...", {"Scissors", "Rake", "Shovel", "Scythe", "Package", "Box", "Hay Bale", "Milk Carton", "Rubber Gloves", "Rubber Boots", "Leather Belt", "Pan", "Slingshot", "Slot"}, function(it)
+    shopping = "FirstShop"
+    itemming = tostring(it)
+    itemming2 = ""
+end)
+
+Section:NewDropdown("Select Item (RedShop)", "...", {"Blade", "Red Shoulder", "Red Guard Shoulder", "Red Recko-Guard Shoulder", "Boxing Gloves", "Melted Wax", "Mushroom Boots", "Cupcake", "Flamethrower"}, function(it)
+    shopping = "RedShop"
+    if it == 'Boxing Gloves' then
+    itemming = "Gloves"
+    itemming2 = ""
+    elseif it == 'Melted Wax' then
+    itemming = "Hat"
+    itemming2 = ""
+    elseif it == 'Mushroom Boots' then
+    itemming = "Boots"
+    itemming2 = ""
+    elseif it == 'Cupcake' then
+    itemming = "Backpack"
+    itemming2 = ""
+    elseif it == 'Flamethrower' then
+    itemming = "Shooting"
+    itemming2 = ""
+    else
+    itemming = tostring(it)
+    itemming2 = ""
+    end
+end)
+
+Section:NewDropdown("Select Item (SecondShop)", "...", {"Hoe", "Pruner", "Hayfork", "Beater", "Wooden-Hammer", "Birdhouse", "Barrel", "Jetpack", "Canister", "Leather Boots", "Fur Gloves", "Earflaps", "Waist Bag", "Balloon"}, function(it)
+    shopping = "SecondShop"
+    if it == 'Wooden-Hammer' then
+    itemming = "Wooden Hammer"
+    itemming2 = ""
+    elseif it == 'Balloon' then
+    itemming = "Glider"
+    itemming2 = ""
+    else
+    itemming = tostring(it)
+    itemming2 = ""
+    end
+end)
+
+Section:NewDropdown("Select Item (ShamanShop)", "???", {"Tiki", "Pine-Cone"}, function(it)
+    shopping = "ShamanShop"
+    if it == 'Tiki' then
+    itemming2 = game:GetService("Workspace").Shops.ShamanShop.Items:GetChildren()[1]
+    itemming = ""
+    elseif it == 'Pine-Cone' then
+    itemming2 = game:GetService("Workspace").Shops.ShamanShop.Items:GetChildren()[2]
+    itemming = ""
+    end
+end)
+
+Section:NewDropdown("Select Item (SoulJarShop)", "...", {"Soul Jar", "Soul Jar x10", "Soul Jar x100", "Soul Jar x1,000", "Soul Jar x10,000"}, function(it)
+    shopping = "SoulJarShop"
+    if it == 'Soul Jar x10' then
+    itemming = "Soul Jar2"
+    itemming2 = ""
+    elseif it == 'Soul Jar x100' then
+    itemming = "Soul Jar3"
+    itemming2 = ""
+    elseif it == 'Soul Jar x1,000' then
+    itemming = "Soul Jar4"
+    itemming2 = ""
+    elseif it == 'Soul Jar x10,000' then
+    itemming = "Soul Jar5"
+    itemming2 = ""
+    else
+    itemming = tostring(it)
+    itemming2 = ""
+    end
+end)
+
+Section:NewDropdown("Select Item (SproutShop)", "...", {"Sprout x1"}, function(it)
+    shopping = "SproutShop"
+    if it == 'Sprout x1' then
+    itemming = "Sprout"
+    itemming2 = ""
+    end
+end)
+
+Section:NewDropdown("Select Item (ThirdShop)", "...", {"Ants Boots", "Ant Gloves", "Big Ant Belt", "Bluffy Hat", "Queen's Bag", "Porcelain Slot", "Golden Balloon"}, function(it)
+    shopping = "ThirdShop"
+    if it == 'Ants Boots' then
+    itemming = "Boots"
+    itemming2 = ""
+    elseif it == 'Ant Gloves' then
+    itemming = "Gloves"
+    itemming2 = ""
+    elseif it == 'Big Ant Belt' then
+    itemming = "Belt"
+    itemming2 = ""
+    elseif it == 'Bluffy Hat' then
+    itemming = "Hat"
+    itemming2 = ""
+    elseif it == "Queen's Bag" then
+    itemming = "Backpack"
+    itemming2 = ""
+    elseif it == 'Porcelain Slot' then
+    itemming = "Slot"
+    itemming2 = ""
+    elseif it == 'Golden Balloon' then
+    itemming = "Glider"
+    itemming2 = ""
+    end
+end)
+
+Section:NewDropdown("Select Item (TicketShop)", "...", {"Golden Egg", "Voltage Ant"}, function(it)
+    shopping = "TicketShop"
+    itemming = tostring(it)
+    itemming2 = ""
+end)
+
+Section:NewDropdown("Select Item (WeaponShop)", "...", {"Bow", "Crossbow", "Arrow x5"}, function(it)
+    shopping = "WeaponShop"
+    if it == 'Arrow x5' then
+    itemming = "Arrow"
+    itemming2 = ""
+    else
+    itemming = tostring(it)
+    itemming2 = ""
+    end
+end)
+
+Section:NewDropdown("Select Item (WinterShop)", "...", {"Candy Cane"}, function(it)
+    shopping = "WinterShop"
+    if it == 'Candy Cane' then
+    itemming = "Golden Egg"
+    itemming2 = ""
+    end
+end)
+
+Section:NewButton("Buy Item", "...", function()
+    if itemming2 == game:GetService("Workspace").Shops.ShamanShop.Items:GetChildren()[1] then
+        local args = {
+        [1] = itemming2,
+        [2] = "Buy"
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):WaitForChild("ShopBuy"):InvokeServer(unpack(args))
+    elseif itemming2 == game:GetService("Workspace").Shops.ShamanShop.Items:GetChildren()[2] then
+        local args = {
+        [1] = itemming2,
+        [2] = "Buy"
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):WaitForChild("ShopBuy"):InvokeServer(unpack(args))
+    elseif itemming2 == game:GetService("Workspace").Shops.CaveShop.Items:GetChildren()[2] then
+        local args = {
+        [1] = itemming2,
+        [2] = "Buy"
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):WaitForChild("ShopBuy"):InvokeServer(unpack(args))
+    elseif itemming2 == game:GetService("Workspace").Shops.CaveShop.Items:GetChildren()[3] then
+        local args = {
+        [1] = itemming2,
+        [2] = "Buy"
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):WaitForChild("ShopBuy"):InvokeServer(unpack(args))
+    elseif itemming2 == game:GetService("Workspace").Shops.CaveShop.Items:GetChildren()[4] then
+        local args = {
+        [1] = itemming2,
+        [2] = "Buy"
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):WaitForChild("ShopBuy"):InvokeServer(unpack(args))
+    elseif itemming2 == game:GetService("Workspace").Shops.CaveShop.Items:GetChildren()[5] then
+        local args = {
+        [1] = itemming2,
+        [2] = "Buy"
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):WaitForChild("ShopBuy"):InvokeServer(unpack(args))
+    else
+        local args = {
+        [1] = workspace:WaitForChild("Shops"):WaitForChild(shopping):WaitForChild("Items"):WaitForChild(itemming),
+        [2] = "Buy"
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Shop"):WaitForChild("ShopBuy"):InvokeServer(unpack(args))
+    end
+end)
+
+local Tab = Window:NewTab("Other")
+
+local Section = Tab:NewSection("S/J")
+
+Section:NewTextBox("Speed", ".", function(s)
+	while game:GetService("RunService").RenderStepped:wait() do
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end
+end)
+
+Section:NewTextBox("Jump", ".", function(j)
+	while game:GetService("RunService").RenderStepped:wait() do
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = j
+    end
+end)
+
+local Section = Tab:NewSection("Using items")
+
+Section:NewToggle("AutoUse Snowflake", "w/Dox", function(state)
+    if state then
+        ttd = 1
+        while wait() do
+        if ttd == 1 then
+            local args = {
+            [1] = "Snowflake"
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Items"):WaitForChild("UseItem"):FireServer(unpack(args))
+        end
+        end
+    else
+        ttd = 0
+    end
+end)
+
+Section:NewToggle("AutoUse Snowflake (15m)", "use after 100x", function(state)
+    if state then
+        ttddd = 1
+        while wait() do
+        if ttddd == 1 then
+            local args = {
+            [1] = "Snowflake"
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Items"):WaitForChild("UseItem"):FireServer(unpack(args))
+            while wait(898) do
+            local args = {
+            [1] = "Snowflake"
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Items"):WaitForChild("UseItem"):FireServer(unpack(args))
+            end
+        end
+        end
+    else
+        ttddd = 0
+    end
+end)
+
+Section:NewToggle("AutoQuests", "...", function(state)
+    if state then
+        ttdddff = 1
+        while wait() do
+        if ttdddff == 1 then
+            local args = {
+            [1] = workspace:WaitForChild("Actions"):WaitForChild("ANPC"):WaitForChild("Donkey")
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Npcs"):WaitForChild("TalkNPC"):InvokeServer(unpack(args))
+            local args = {
+            [1] = workspace:WaitForChild("Actions"):WaitForChild("ANPC"):WaitForChild("Bear")
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Npcs"):WaitForChild("TalkNPC"):InvokeServer(unpack(args))
+            local args = {
+            [1] = workspace:WaitForChild("Actions"):WaitForChild("ANPC"):WaitForChild("Beaver")
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Npcs"):WaitForChild("TalkNPC"):InvokeServer(unpack(args))
+            local args = {
+            [1] = workspace:WaitForChild("Actions"):WaitForChild("ANPC"):WaitForChild("Blue Parrot")
+            } 
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Npcs"):WaitForChild("TalkNPC"):InvokeServer(unpack(args))
+            local args = {
+            [1] = workspace:WaitForChild("Actions"):WaitForChild("ANPC"):WaitForChild("Fox")
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Npcs"):WaitForChild("TalkNPC"):InvokeServer(unpack(args))
+            local args = {
+            [1] = workspace:WaitForChild("Actions"):WaitForChild("ANPC"):WaitForChild("Mole")
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Npcs"):WaitForChild("TalkNPC"):InvokeServer(unpack(args))
+            local args = {
+            [1] = workspace:WaitForChild("Actions"):WaitForChild("ANPC"):WaitForChild("Mouse")
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Npcs"):WaitForChild("TalkNPC"):InvokeServer(unpack(args))
+            local args = {
+            [1] = workspace:WaitForChild("Actions"):WaitForChild("ANPC"):WaitForChild("Ram")
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Npcs"):WaitForChild("TalkNPC"):InvokeServer(unpack(args))
+            local args = {
+            [1] = workspace:WaitForChild("Actions"):WaitForChild("ANPC"):WaitForChild("Red Parrot")
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Npcs"):WaitForChild("TalkNPC"):InvokeServer(unpack(args))
+            local args = {
+             [1] = workspace:WaitForChild("Actions"):WaitForChild("ANPC"):WaitForChild("Santa")
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Npcs"):WaitForChild("TalkNPC"):InvokeServer(unpack(args))
+            local args = {
+            [1] = workspace:WaitForChild("Actions"):WaitForChild("ANPC"):WaitForChild("Shaman")
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Npcs"):WaitForChild("TalkNPC"):InvokeServer(unpack(args))
+            local args = {
+            [1] = workspace:WaitForChild("Actions"):WaitForChild("ANPC"):WaitForChild("Woodpecker")
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Npcs"):WaitForChild("TalkNPC"):InvokeServer(unpack(args))
+        end
+        end
+    else
+        ttdddff = 0
+    end
+end)
+
+Section:NewButton("Spend Ginger (NO COOLDOWN)", "...", function()
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Other"):WaitForChild("GingerSpend"):InvokeServer()
+end)
+
+local Section = Tab:NewSection("Destroy Limiters")
+
+Section:NewButton("Destroy Limiters", "for example, you need 5 bees for get this place", function()
+    game:GetService("Workspace").MapLimiter:Destroy()
+end)
+
+local Section = Tab:NewSection("Give Present")
+
+Section:NewTextBox("Enter Nickname", "...", function(namee)
+    namirf = tostring(namee)
+end)
+
+Section:NewButton("Give Present", "...", function()
+    local args = {
+    [1] = game:GetService("Players"):WaitForChild(namirf)
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Other"):WaitForChild("GivePresent"):FireServer(unpack(args))
+end)
